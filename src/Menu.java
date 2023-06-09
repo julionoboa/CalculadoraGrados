@@ -48,6 +48,7 @@ public class Menu {
 
             //Switch para trabajar las diferentes operaciones
             switch (option) {
+
                 case 1:
                     System.out.println("Introduzca el valor en Celsius: ");
                     int optionMenu = validate(sc);
@@ -81,17 +82,17 @@ public class Menu {
             }
 
             //Pregunta de confirmacion
-            System.out.println("¿Desea realizar otra operación? Si(Y) No(N)");
+            System.out.println("¿Desea salir? Si(Y) No(N)");
 
             do{
                 entrada = sc.nextLine();
                 entrada = entrada.toUpperCase();
                 if (entrada.equalsIgnoreCase("Y")){
-                    repetir = -1;
+                    repetir = 1;
                     break;
                 }
                 else if (entrada.equalsIgnoreCase("N")){
-                    repetir = 1;
+                    repetir = -1;
                     break;
                 }
                 else {
